@@ -33,8 +33,8 @@ const Landing = () => {
         </div>
       </section>
 
-      <div className="flex w-full justify-around bg-gray-00 ">
-        <section className="bg-gray-200 py-10">
+      <div className="flex w-full justify-around bg-gray-100 flex-wrap gap-10">
+        <section className="bg-gray-200 py-10 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg backdrop-saturate-150">
           <div className="max-w-md mx-auto px-4">
             <motion.h3
               initial={{ opacity: 0, y: -20 }}
@@ -81,7 +81,7 @@ const Landing = () => {
           </div>
         </section>
 
-        <section className="bg-gray-200 py-10">
+        <section className="bg-gray-200 py-10 rounded-lg shadow-lg">
           <div className="max-w-md mx-auto px-4">
             <motion.h3
               initial={{ opacity: 0, y: -20 }}
@@ -128,7 +128,8 @@ const Landing = () => {
             </div>
           </div>
         </section>
-        <section className="bg-gray-200 py-10">
+
+        <section className="bg-gray-200 py-10 rounded-lg shadow-lg">
           <div className="max-w-md mx-auto px-4">
             <motion.h3
               initial={{ opacity: 0, y: -20 }}
