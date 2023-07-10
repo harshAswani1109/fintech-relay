@@ -1,5 +1,9 @@
 import { useState } from "react";
-
+import Image from "next/image";
+import logo from "../assets/logo.jpg";
+import logoText from "../assets/logoText.png";
+import Link from "next/link";
+import { TfiAlignRight } from "react-icons/tfi";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -8,40 +12,50 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-gray-800 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <h1 className="text-white">Logo</h1>
+            <div className="flex justify-center items-center gap-4 ">
+              <Image src={logo} className="h-16 w-16 rounded-full" />
+              <Image
+                src={logoText}
+                className="h-16 w-full mt-2 max-sm:hidden"
+              />
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            <div className="ml-10 flex items-baseline space-x-2">
+              <Link
+                href="/"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Home
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
-                About
-              </a>
-              <a
+                AboutUs
+              </Link>
+              <Link
                 href="/compare"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
                 Services
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              </Link>
+              <Link
+                href="/faq"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
-                Contact
-              </a>
+                FAQ
+              </Link>
+              <Link
+                href="/info"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Info
+              </Link>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -50,20 +64,7 @@ const Navbar = () => {
               type="button"
               className="text-gray-400 hover:text-white focus:outline-none focus:text-white"
             >
-              <svg
-                className="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              <TfiAlignRight className="h-8 w-8" />
             </button>
           </div>
         </div>
@@ -71,30 +72,36 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/about"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              About
-            </a>
-            <a
+              About Us
+            </Link>
+            <Link
               href="/compare"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Services
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/faq"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              Contact
-            </a>
+              F A Q
+            </Link>
+            <Link
+              href="/info"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Information
+            </Link>
           </div>
         </div>
       )}
