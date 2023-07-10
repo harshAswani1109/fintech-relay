@@ -4,7 +4,7 @@ import {BiChevronDownCircle} from "react-icons/bi";
 
 const Layout = ({ handleClick, isSomeActive, data, turn, setTurn }) => {
     return (
-        <div className='items-center flex flex-col lg:w-7/12 lg:mt-7 w-full my-5 px-4'>
+        <div className='items-center flex flex-col lg:w-7/12 lg:mt-7 w-full my-5 px-4 '>
             <div className='font-bold text-3xl px-6 py-3 text-white rounded-md bg-gray-900'>
                 Frequently Asked Questions
             </div>
