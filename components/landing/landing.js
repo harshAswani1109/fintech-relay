@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Landing = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 ">
       <header className="bg-gray-900 text-white py-4">
         <h1 className="text-4xl text-center font-bold">Fintech Relay</h1>
       </header>
