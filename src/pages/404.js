@@ -9,14 +9,32 @@ const NotFound = () => {
         <title>404 Not Found</title>
       </Head>
       <div className="flex flex-col items-center justify-center h-screen bg-gray-100 ">
-        <motion.h1
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: 'spring', stiffness: 200, duration: 0.8, delay: 0.4 }}
-          className="text-[300px] max-md:text-[200px] font-bold text-[#1f2937]"
-        >
-          404
-        </motion.h1>
+        <div className='flex flex-row'>
+          <motion.h1
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: 'spring', stiffness: 200, duration: 0.8, delay: 0.6 }}
+            className="text-[300px] max-md:text-[200px] font-bold text-[#1f2937]"
+          >
+            4
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 200, duration: 0.8, delay: 0.4 }}
+            className="text-[300px] max-md:text-[200px] font-bold text-[#1f2937]"
+          >
+            0
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: 'spring', stiffness: 200, duration: 0.8, delay: 0.6 }}
+            className="text-[300px] max-md:text-[200px] font-bold text-[#1f2937]"
+          >
+            4
+          </motion.h1>
+        </div>
         <motion.h2
           initial={{ opacity:0, x: 500 }}
           animate={{ opacity:1, x: 0 }}

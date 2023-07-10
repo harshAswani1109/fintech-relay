@@ -16,8 +16,7 @@ export default function Home() {
 
     return (
     <>
-        
-        <div className='grid place-items-center w-full'>
+        <div className='grid place-items-center w-full bg-gray-100'>
         <Layout
             handleClick={handleClick}
             isSomeActive={isSomeActive}
