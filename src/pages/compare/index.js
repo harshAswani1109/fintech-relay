@@ -1,21 +1,134 @@
 import { useState } from "react";
-
+import { RiArrowGoBackLine } from "react-icons/ri";
+import { MdCalculate } from "react-icons/md";
+import { motion } from "framer-motion";
 const fintechProducts = [
-  { name: "PayPal", transactionFee: 2.9 },
-  { name: "Coinbase", transactionFee: 1.5 },
-  { name: "Mobile Banking", transactionFee: 0.5 },
-  { name: "Apple Pay", transactionFee: 1.0 },
-  { name: "Phone Pay", transactionFee: 1.8 },
-  { name: "Chime", transactionFee: 1.2 },
-  { name: "Revolut", transactionFee: 0.8 },
-  { name: "Stripe", transactionFee: 2.9 },
-  { name: "Adyen", transactionFee: 2.0 },
-  { name: "Venmo", transactionFee: 3.0 },
-  { name: "Affirm", transactionFee: 1.5 },
-  { name: "Plaid", transactionFee: 1.0 },
-  { name: "ET Money", transactionFee: 1.2 },
-  { name: "Acorns", transactionFee: 1.1 },
-  { name: "Suplari", transactionFee: 2.5 },
+  {
+    name: "PayPal",
+    transactionFee: 2.9,
+    features: ["Payment processing", "Money transfers", "Online shopping"],
+  },
+  {
+    name: "Coinbase",
+    transactionFee: 1.5,
+    features: [
+      "Cryptocurrency trading",
+      "Wallet services",
+      "Investment options",
+    ],
+  },
+  {
+    name: "Mobile Banking",
+    transactionFee: 0.5,
+    features: ["Mobile payments", "Account management", "Budgeting tools"],
+  },
+  {
+    name: "Apple Pay",
+    transactionFee: 1.0,
+    features: ["Contactless payments", "In-app purchases", "Rewards programs"],
+  },
+  {
+    name: "Phone Pay",
+    transactionFee: 1.8,
+    features: ["Mobile payments", "Bill splitting", "Cashback offers"],
+  },
+  {
+    name: "Chime",
+    transactionFee: 1.2,
+    features: ["Online banking", "Automatic savings", "Early paycheck access"],
+  },
+  {
+    name: "Revolut",
+    transactionFee: 0.8,
+    features: [
+      "Multi-currency accounts",
+      "Cryptocurrency exchange",
+      "Budgeting tools",
+    ],
+  },
+  {
+    name: "Stripe",
+    transactionFee: 2.9,
+    features: [
+      "Payment processing",
+      "Subscription billing",
+      "Fraud protection",
+    ],
+  },
+  {
+    name: "Adyen",
+    transactionFee: 2.0,
+    features: [
+      "Global payment methods",
+      "Risk management",
+      "Analytics and reporting",
+    ],
+  },
+  {
+    name: "Venmo",
+    transactionFee: 3.0,
+    features: [
+      "Peer-to-peer payments",
+      "Social interactions",
+      "Payment splitting",
+    ],
+  },
+  {
+    name: "Affirm",
+    transactionFee: 1.5,
+    features: [
+      "Buy now, pay later",
+      "Installment plans",
+      "Virtual credit card",
+    ],
+  },
+  {
+    name: "Plaid",
+    transactionFee: 1.0,
+    features: [
+      "Bank account integration",
+      "Transaction data access",
+      "Identity verification",
+    ],
+  },
+  {
+    name: "ET Money",
+    transactionFee: 1.2,
+    features: [
+      "Mutual fund investments",
+      "Expense tracking",
+      "Goal-based savings",
+    ],
+  },
+  {
+    name: "Acorns",
+    transactionFee: 1.1,
+    features: [
+      "Automated investing",
+      "Round-up savings",
+      "Financial education",
+    ],
+  },
+  {
+    name: "Suplari",
+    transactionFee: 2.5,
+    features: ["Spend analytics", "Cost management", "Vendor management"],
+  },
+  {
+    name: "BlockFi",
+    transactionFee: 1.99,
+    features: ["Cryptocurrency trading", "Lending", "Interest accounts"],
+  },
+  {
+    name: "SoFi",
+    transactionFee: 0.25,
+    features: ["Investing", "Lending", "Personal loans"],
+  },
+  {
+    name: "Robinhood",
+    transactionFee: 0.0,
+    features: ["Stock trading", "Options trading", "Cryptocurrency trading"],
+  },
 ];
 
 const ComparePage = () => {
@@ -37,7 +150,12 @@ const ComparePage = () => {
   };
 
   const handleAmountChange = (event) => {
-    setAmount(event.target.value);
+    const value = event.target.value;
+    if (value >= 0) {
+      setAmount(value);
+    } else {
+      setAmount("");
+    }
   };
 
   const handleComparison = () => {
@@ -65,6 +183,7 @@ const ComparePage = () => {
       return {
         name: selectedProduct,
         fee: transactionFee,
+        features: product.features,
       };
     });
     setProductFees(fees);
@@ -75,28 +194,32 @@ const ComparePage = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 min-h-screen">
       <h1 className="text-3xl font-bold mb-6">Fintech Product Comparison</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {fintechProducts.map((product) => (
-          <div
+          <motion.div
             key={product.name}
-            className="flex items-center bg-white rounded p-4 shadow hover:bg-blue-100 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+            className="bg-white rounded p-4 shadow-xl font-serif tracking-wider cursor-pointer py-6"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <input
-              type="checkbox"
-              id={product.name}
-              name={product.name}
-              value={product.name}
-              checked={selectedProducts.includes(product.name)}
-              onChange={handleProductSelection}
-              className="mr-2"
-            />
-            <label htmlFor={product.name} className="text-lg">
-              {product.name}
-            </label>
-          </div>
+            <div className="flex items-center justify-between ">
+              <label htmlFor={product.name} className="text-lg font-semibold">
+                {product.name}
+              </label>
+              <input
+                type="checkbox"
+                id={product.name}
+                name={product.name}
+                value={product.name}
+                checked={selectedProducts.includes(product.name)}
+                onChange={handleProductSelection}
+                className="h-5 w-5 mt-4"
+              />
+            </div>
+          </motion.div>
         ))}
       </div>
 
@@ -110,28 +233,33 @@ const ComparePage = () => {
 
       {showPopup && (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-75">
-          <div className="bg-white rounded p-6 shadow-lg w-full sm:w-auto">
-            <h2 className="text-xl font-bold mb-4">Enter Transaction Amount</h2>
-            <input
-              type="number"
-              className="border border-gray-300 p-2 rounded mt-2 mb-4"
-              value={amount}
-              onChange={handleAmountChange}
-            />
+          <div className="backdrop-blur bg-[#00000050] p-6 shadow-lg w-full sm:w-auto text-white overflow-y-auto max-h-screen min-h-[240px] mx-2 rounded-3xl">
+            <div className="flex items-center justify-between gap-6 ">
+              <h2 className="text-xl font-bold tracking-wide">
+                Transaction Amount
+              </h2>
+              <button
+                className="bg-red-500 text-white p-2 rounded-full"
+                onClick={handlePopupClose}
+              >
+                <RiArrowGoBackLine className="h-6 w-6" />
+              </button>
+            </div>
+            <div className="flex justify-between items-center mt-4 gap-6">
+              <input
+                type="number"
+                className="border border-gray-300 px-2 py-2 rounded text-black border-none outline-none"
+                value={amount}
+                onChange={handleAmountChange}
+              />
 
-            <button
-              className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
-              onClick={handleTransactionFeeCalculation}
-            >
-              Calculate
-            </button>
-
-            <button
-              className="bg-red-500 text-white px-4 py-2 rounded mt-4 ml-2"
-              onClick={handlePopupClose}
-            >
-              Close
-            </button>
+              <button
+                className="bg-blue-500 text-white p-2 rounded-full"
+                onClick={handleTransactionFeeCalculation}
+              >
+                <MdCalculate className="h-6 w-6" />
+              </button>
+            </div>
 
             {bestProduct && (
               <div className="mt-6">
@@ -142,15 +270,28 @@ const ComparePage = () => {
                 </p>
               </div>
             )}
-
-            <div className="mt-6">
-              <h3 className="text-lg font-bold">Transaction Fees:</h3>
-              {productFees.map((fee) => (
-                <p key={fee.name} className="text-md">
-                  {fee.name}: {fee.fee} Rs
-                </p>
-              ))}
-            </div>
+            {selectedProducts.length >= 2 && (
+              <div className="mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                  {productFees.map((product) => (
+                    <div
+                      key={product.name}
+                      className="backdrop-blur bg-[#00000050] rounded p-4 shadow transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                    >
+                      <h4 className="text-md font-bold mb-2">{product.name}</h4>
+                      <ul className="list-disc list-inside ml-4">
+                        {product.features.map((feature) => (
+                          <li key={feature}>{feature}</li>
+                        ))}
+                      </ul>
+                      <div className="text-md font-bold mt-4">
+                        Transaction Fee: {product.fee} Rs.
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}
