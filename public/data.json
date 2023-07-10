@@ -1,0 +1,27 @@
+[
+    {
+        "idx": 1,
+        "question":"How does the Transaction Fee Calculation work in Fintech Relay?",
+        "answer":"The Transaction Fee Calculation in Fintech Relay takes the transaction amount and applies the transaction fee percentage provided for each selected product. It calculates the transaction fee amount for each product based on the transaction amount."
+    },
+    {
+        "idx": 2,
+        "question":"What information does the Display Results component show in Fintech Relay?",
+        "answer":"The Display Results component in Fintech Relay shows the transaction fees for each selected product, along with their respective features. It provides a comprehensive overview of the fees associated with each product, enabling users to compare and make informed decisions."
+    },
+    {
+        "idx": 3,
+        "question":" How does Fintech Relay determine the best option among the selected products?",
+        "answer":"Fintech Relay determines the best option among the selected products by highlighting the product with the lowest transaction fee. It compares the fees calculated for each product and identifies the one with the most competitive pricing, making it the recommended choice."
+    },
+    {
+        "idx": 4,
+        "question":"Can I customize the transaction fee percentage for each product in Fintech Relay?",
+        "answer":" Yes, in Fintech Relay, you can customize the transaction fee percentage for each product. This allows you to set different fee structures based on your preferences or the specific requirements of your business."
+    },
+    {
+        "idx": 5,
+        "question":"Are there any additional features or functionalities available in Fintech Relay's Transaction Fee Calculation component?",
+        "answer":"In addition to calculating transaction fees based on the provided percentage, Fintech Relay's Transaction Fee Calculation component may offer additional features such as fee caps, tiered fee structures, or discounts based on transaction volume. These features can be tailored to meet your specific needs and enhance your overall fee management capabilities."
+    }
+]
