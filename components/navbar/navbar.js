@@ -30,19 +30,19 @@ const Navbar = () => {
                 href="/"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
-                Home
+                HOME
               </Link>
               <Link
                 href="/aboutUs"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
-                AboutUs
+                ABOUT US
               </Link>
               <Link
                 href="/compare"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
-                Services
+                SERVICES
               </Link>
               <Link
                 href="/faq"
@@ -54,7 +54,7 @@ const Navbar = () => {
                 href="/info"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
               >
-                Info
+                INFO
               </Link>
             </div>
           </div>
