@@ -185,7 +185,7 @@ const Landing = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative z-10 px-6 py-3 bg-gray-900 text-white text-xl rounded-lg hover:bg-gray-700 hover:shadow-lg transition-all duration-300"
+              className="relative z-10 px-6 py-3 bg-blue-600 text-white text-xl rounded-lg hover:bg-blue-700 hover:shadow-lg transition-all duration-300"
             >
               Get Started with Fintech Relay
             </motion.button>

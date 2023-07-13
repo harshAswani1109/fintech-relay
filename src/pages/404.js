@@ -52,7 +52,7 @@ const NotFound = () => {
         </motion.p>
         <Link
           href="/"
-          className="mt-8 px-6 py-3 bg-gray-700 hover:bg-gray-900 text-white rounded-lg shadow-md transition-colors duration-300 ease-in-out"
+          className="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-colors duration-300 ease-in-out"
         >
           Go Back Home
         </Link>
