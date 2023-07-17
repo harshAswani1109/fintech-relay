@@ -1,0 +1,74 @@
+{
+  "PayPal": {
+    "name": "PayPal",
+    "description": "Payment processing, money transfers, online shopping, etc."
+  },
+  "Coinbase": {
+    "name": "Coinbase",
+    "description": "Cryptocurrency trading, wallet services, investment options, etc."
+  },
+  "Mobile Banking": {
+    "name": "Mobile Banking",
+    "description": "Mobile payments, account management, budgeting tools, etc."
+  },
+  "Apple Pay": {
+    "name": "Apple Pay",
+    "description": "Contactless payments, in-app purchases, rewards programs, etc."
+  },
+  "Phone Pay": {
+    "name": "Phone Pay",
+    "description": "Mobile payments, bill splitting, cashback offers, etc."
+  },
+  "Chime": {
+    "name": "Chime",
+    "description": "Online banking, automatic savings, early paycheck access, etc."
+  },
+  "Revolut": {
+    "name": "Revolut",
+    "description": "Multi-currency accounts, cryptocurrency exchange, budgeting tools, etc."
+  },
+  "Stripe": {
+    "name": "Stripe",
+    "description": "Payment processing, subscription billing, fraud protection, etc."
+  },
+  "Adyen": {
+    "name": "Adyen",
+    "description": "Global payment methods, risk management, analytics and reporting, etc."
+  },
+  "Venmo": {
+    "name": "Venmo",
+    "description": "Peer-to-peer payments, social interactions, payment splitting, etc."
+  },
+  "Affirm": {
+    "name": "Affirm",
+    "description": "Buy now, pay later, installment plans, virtual credit card, etc."
+  },
+  "Plaid": {
+    "name": "Plaid",
+    "description": "Bank account integration, transaction data access, identity verification, etc."
+  },
+  "ET Money": {
+    "name": "ET Money",
+    "description": "Mutual fund investments, expense tracking, goal-based savings, etc."
+  },
+  "Acorns": {
+    "name": "Acorns",
+    "description": "Automated investing, round-up savings, financial education, etc."
+  },
+  "Suplari": {
+    "name": "Suplari",
+    "description": "Spend analytics, cost management, vendor management, etc."
+  },
+  "BlockFi": {
+    "name": "BlockFi",
+    "description": "Cryptocurrency trading, lending, interest accounts, etc."
+  },
+  "SoFi": {
+    "name": "SoFi",
+    "description": "Investing, lending, personal loans, etc."
+  },
+  "Robinhood": {
+    "name": "Robinhood",
+    "description": "Stock trading, options trading, cryptocurrency trading, etc."
+  }
+}
