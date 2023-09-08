@@ -59,7 +59,6 @@ const Footer = () => {
               <p className="text-gray-300 mb-1">Harsh Aswani: +91 9680928107</p>
               <p className="text-gray-300 mb-1">Sashikanta Mohanty: +91 6371294381</p>
               <p className='text-gray-300 mb-1'>Ayush Garg: +91 9548832402 </p>
-              <p className='text-gray-300'>Arnabya Agarwal: +91 79785640736 </p>
             </div>
 
             {/* Vertical line */}
